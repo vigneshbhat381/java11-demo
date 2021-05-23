@@ -39,7 +39,7 @@ pipeline {
         }
        stage('Static Code Analaysis') {
             steps {
-                withSonarQubeEnv(credentialsId: 'SonarCloud', installationName: 'sonarcloud') {
+                withSonarQubeEnv(credentialsId: 'sonar_token', installationName: 'sonarcloud') {
                     sh 'mvn sonar:sonar'
                 }
             }
