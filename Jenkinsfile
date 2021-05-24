@@ -1,5 +1,5 @@
 pipeline {
-    agent {'master'}
+    agent ('node1')
     environment {
         SONAR_TOKEN= '64329bab7f2264e78495529bfc2382f13ef589de'
         APP_HOME='/home/app'
