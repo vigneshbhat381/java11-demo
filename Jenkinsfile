@@ -1,7 +1,7 @@
 pipeline {
     agent {label 'master'}
     environment {
-        SONAR_TOKEN= '64329bab7f2264e78495529bfc2382f13ef589de'
+        SONAR_TOKEN= '4f2833bcf97649f9dd237a3a03e0b89f19ca1ca0'
         APP_HOME='/home/app'
         PRAGRA_BATCH='devs'
     }
@@ -18,7 +18,7 @@ pipeline {
         pollSCM('* * * * *')
     }
     tools{
-        maven  'm3'
+        maven  'Maven3'
         jdk 'jdk11'
     }
 
@@ -40,7 +40,7 @@ pipeline {
         }
        stage('Static Code Analaysis') {
             steps {
-                withSonarQubeEnv(credentialsId: 'sonarcloud', installationName: 'sonarcloud') {
+                withSonarQubeEnv(credentialsId: 'sonartoken', installationName: 'sonarcloud') {
                     sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar'
                 }
             }
