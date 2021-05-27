@@ -33,11 +33,11 @@ pipeline {
                 checkout scm
             }
         }
-       // stage('Compile') {
-         //   steps {
-           //     sh 'mvn compile'
-            //}
-        //}
+        stage('Compile') {
+            steps {
+                sh 'mvn compile'
+            }
+        }
        stage('Static Code Analaysis') {
             steps {
                 withSonarQubeEnv(credentialsId: 'sonar', installationName: 'sonarcloud') {
