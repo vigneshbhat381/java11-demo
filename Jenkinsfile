@@ -60,7 +60,7 @@ pipeline {
 
     post {
         always {
-            echo 'ALL GOOD '
+            echo 'ALL GOOD, code is working'
         }
     }
 
