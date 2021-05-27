@@ -16,7 +16,7 @@
 	<properties>
 		<java.version>11</java.version>
 		  <sonar.projectKey>vigneshbhat381_java11-demo</sonar.projectKey>
-                  <sonar.organization>sonarcloudtes</sonar.organization>
+                  <sonar.organization>vigneshbhat381</sonar.organization>
                   <sonar.host.url>https://sonarcloud.io</sonar.host.url>
 	</properties>
 	<dependencies>
